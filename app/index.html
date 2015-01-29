@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en" ng-app="personalWebsite" ng-controller="HobbyListCtrl">
+<head>
+  <meta charset="utf-8">
+  <title>Ted Mader: {{query}}</title>
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="css/app.css">
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="js/controllers.js"></script>
+</head>
+<!--The ngController directive references the name of our controller, HobbyListCtrl (located in the JavaScript file controllers.js).-->
+<body>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-2">
+        <!--Sidebar content-->
+
+		<!--The data that a user types into the input box (named query) is immediately available as a filter input in the list repeater.-->
+        Search: <input ng-model="query">
+
+      </div>
+      <div class="col-md-10">
+        <!--Body content-->
+	    <p>Hello, {{name}}!</p>
+	    <p>I have {{hobbies.length}} hobbies to share with you:</p>
+        <ul class="hobbies">
+		  <!--The filter lets a user enter search criteria and immediately see the effects of their search on the hobby list.-->
+          <li ng-repeat="hobby in hobbies | filter:query">
+            {{hobby.name}}
+	        <p>{{hobby.snippet}}</p>
+	        <p><a href={{hobby.link}}>{{hobby.linkText}}</a></p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
