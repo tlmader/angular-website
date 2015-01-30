@@ -4,25 +4,25 @@
 
 describe('Personal Website', function() {
 
-  describe('Hobby list view', function() {
+  describe('Interest list view', function() {
 
     beforeEach(function() {
       browser.get('app/index.html');
     });
 
-    var hobbyList = element.all(by.repeater('hobby in hobbies'));
+    var interestList = element.all(by.repeater('interest in interests'));
     var query = element(by.model('query'));
 
-    it('should filter the hobby list as a user types into the search box', function() {
+    it('should filter the interest list as a user types into the search box', function() {
 
-      expect(hobbyList.count()).toBe(3);
+      expect(interestList.count()).toBe(3);
 
       query.sendKeys('programming');
-      expect(hobbyList.count()).toBe(1);
+      expect(interestList.count()).toBe(1);
 
       query.clear();
       query.sendKeys('game');
-      expect(hobbyList.count()).toBe(2);
+      expect(interestList.count()).toBe(2);
     });
 
     it('should display the current filter value in the title bar', function() {

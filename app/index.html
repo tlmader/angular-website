@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" ng-app="personalWebsite" ng-controller="HobbyListCtrl">
+<html lang="en" ng-app="personalWebsite" ng-controller="InterestListCtrl">
 <head>
   <meta charset="utf-8">
   <title>Ted Mader: {{query}}</title>
@@ -8,7 +8,7 @@
   <script src="bower_components/angular/angular.js"></script>
   <script src="js/controllers.js"></script>
 </head>
-<!--The ngController directive references the name of our controller, HobbyListCtrl (located in the JavaScript file controllers.js).-->
+<!--The ngController directive references the name of our controller, InterestListCtrl (located in the JavaScript file controllers.js).-->
 <body>
 
   <div class="container-fluid">
@@ -23,13 +23,13 @@
       <div class="col-md-10">
         <!--Body content-->
 	    <p>Hello, {{name}}!</p>
-	    <p>I have {{hobbies.length}} hobbies to share with you:</p>
-        <ul class="hobbies">
-		  <!--The filter lets a user enter search criteria and immediately see the effects of their search on the hobby list.-->
-          <li ng-repeat="hobby in hobbies | filter:query">
-            {{hobby.name}}
-	        <p>{{hobby.snippet}}</p>
-	        <p><a href={{hobby.link}}>{{hobby.linkText}}</a></p>
+	    <p>I have {{interests.length}} interests to share with you:</p>
+        <ul class="interests">
+		  <!--The filter lets a user enter search criteria and immediately see the effects of their search on the interest list.-->
+          <li ng-repeat="interest in interests | filter:query">
+            {{interest.name}}
+	        <p>{{interest.snippet}}</p>
+	        <p><a href={{interest.link}}>{{interest.linkText}}</a></p>
           </li>
         </ul>
       </div>

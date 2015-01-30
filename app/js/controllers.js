@@ -4,10 +4,10 @@
 
 var personalWebsite = angular.module('personalWebsite', []);
 
-// The HobbyListCtrl controller attaches the hobby data to the $scope that was injected into our controller function.
-personalWebsite.controller('HobbyListCtrl', function ($scope) {
+// The InterestListCtrl controller attaches the interest data to the $scope that was injected into our controller function.
+personalWebsite.controller('InterestListCtrl', function ($scope) {
   $scope.name = 'World';
-  $scope.hobbies = [
+  $scope.interests = [
     {'name': 'Programming',
      'snippet': 'My college curriculum focuses on Java, and I work as a software engineer apprentice at the GE Capital Technology Center in New Orleans. Aside from Java, I have worked with C, C#, Python, HTML, CSS, JavaScript, and AngularJS.', 'link': 'https://github.com/Tlmader', 'linkText': 'Check out my GitHub profile.'},
     {'name': 'Gaming',
