@@ -32,7 +32,7 @@ describe('Personal Website', function() {
             query.sendKeys('Gaming');
             expect(browser.getTitle()).toMatch(/Ted Mader: Gaming$/);
         });
-	
+
         it('should be possible to control interest order via the drop down select box', function() {
 
             var interestNameColumn = element.all(by.repeater('interest in interests').column('interest.name'));

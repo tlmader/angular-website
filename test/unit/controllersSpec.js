@@ -10,7 +10,7 @@ describe('Personal Website controllers', function() {
         // Before each test we tell Angular to load the personalWebsite module.
         beforeEach(module('personalWebsite'));
 	
-        beforeEach(inject(function($controller) {
+	beforeEach(inject(function($controller) {
             scope = {};
             ctrl = $controller('InterestListCtrl', {$scope:scope});
 	}));
