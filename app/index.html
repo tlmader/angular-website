@@ -1,44 +1,44 @@
 <!doctype html>
 <html lang="en" ng-app="personalWebsite" ng-controller="InterestListCtrl">
 <head>
-  <meta charset="utf-8">
-  <title>Ted Mader: {{query}}</title>
-  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
-  <link rel="stylesheet" href="css/app.css">
-  <script src="bower_components/angular/angular.js"></script>
-  <script src="js/controllers.js"></script>
+    <meta charset="utf-8">
+    <title>Ted Mader: {{query}}</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="css/app.css">
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="js/controllers.js"></script>
 </head>
 <!--The ngController directive references the name of our controller, InterestListCtrl (located in the JavaScript file controllers.js).-->
 <body>
 
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-md-2">
-        <!--Sidebar content-->
-        
-        <!--The data that a user types into the input box (named query) is immediately available as a filter input in the list repeater.-->
-        Search: <input ng-model="query">
-        Sort by:
-        <select ng-model="orderProp">
-          <option value="name">Alphabetical</option>
-          <option value="favorite">Favorite</option>
-        </select>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2">
+                <!--Sidebar content-->
 
-      </div>
-      <div class="col-md-10">
-        <!--Body content-->
-        <p>Hello, {{name}}!</p>
-        <p>I have {{interests.length}} interests to share with you:</p>
-        <ul class="interests">
-          <!--The filter lets a user enter search criteria and immediately see the effects of their search on the interest list.-->
-          <li ng-repeat="interest in interests | filter:query | orderBy:orderProp">
-            {{interest.name}}
-	    <p>{{interest.snippet}}</p>
-	    <p><a href={{interest.link}}>{{interest.linkText}}</a></p>
-          </li>
-        </ul>
-      </div>
+                <!--The data that a user types into the input box (named query) is immediately available as a filter input in the list repeater.-->
+                Search: <input ng-model="query">
+                Sort by:
+                <select ng-model="orderProp">
+                    <option value="name">Alphabetical</option>
+                    <option value="favorite">Favorite</option>
+               </select>
+
+            </div>
+            <div class="col-md-10">
+                <!--Body content-->
+                <p>Hello, {{name}}!</p>
+                <p>I have {{interests.length}} interests to share with you:</p>
+                <ul class="interests">
+                    <!--The filter lets a user enter search criteria and immediately see the effects of their search on the interest list.-->
+                    <li ng-repeat="interest in interests | filter:query | orderBy:orderProp">
+                        {{interest.name}}
+                        <p>{{interest.snippet}}</p>
+                        <p><a href={{interest.link}}>{{interest.linkText}}</a></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
-  </div>
 </body>
 </html>
