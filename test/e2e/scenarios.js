@@ -2,7 +2,7 @@
 
 /* http://docs.angularjs.org/guide/dev_guide.e2e-testing */
 
-describe('Personal Website', function() {
+describe('Ted\'s Website', function() {
 
     describe('Interest list view', function() {
 

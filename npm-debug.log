@@ -6,20 +6,20 @@
 2 info using npm@1.4.28
 3 info using node@v0.10.36
 4 verbose run-script [ 'preprotractor', 'protractor', 'postprotractor' ]
-5 info preprotractor angular-phonecat@0.0.0
+5 info preprotractor ted-website@0.0.0
 6 verbose unsafe-perm in lifecycle true
-7 info protractor angular-phonecat@0.0.0
+7 info protractor ted-website@0.0.0
 8 verbose unsafe-perm in lifecycle true
-9 info angular-phonecat@0.0.0 Failed to exec protractor script
-10 error angular-phonecat@0.0.0 protractor: `protractor test/protractor-conf.js`
+9 info ted-website@0.0.0 Failed to exec protractor script
+10 error ted-website@0.0.0 protractor: `protractor test/protractor-conf.js`
 10 error Exit status 1
-11 error Failed at the angular-phonecat@0.0.0 protractor script.
-11 error This is most likely a problem with the angular-phonecat package,
+11 error Failed at the ted-website@0.0.0 protractor script.
+11 error This is most likely a problem with the ted-website package,
 11 error not with npm itself.
 11 error Tell the author that this fails on your system:
 11 error     protractor test/protractor-conf.js
 11 error You can get their info via:
-11 error     npm owner ls angular-phonecat
+11 error     npm owner ls ted-website
 11 error There is likely additional logging output above.
 12 error System Windows_NT 6.2.9200
 13 error command "d:\\Program Files\\nodejs\\node.exe" "d:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "run" "protractor"

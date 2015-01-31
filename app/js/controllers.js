@@ -2,10 +2,10 @@
 
 /* Controllers */
 
-var personalWebsite = angular.module('personalWebsite', []);
+var tedWebsite = angular.module('tedWebsite', []);
 
 // The InterestListCtrl controller attaches the interest data to the $scope that was injected into our controller function.
-personalWebsite.controller('InterestListCtrl', function ($scope) {
+tedWebsite.controller('InterestListCtrl', function ($scope) {
     $scope.name = 'World';
     $scope.interests = [
         {'name': 'Programming',

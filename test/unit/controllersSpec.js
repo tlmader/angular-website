@@ -2,13 +2,13 @@
 
 /* jasmine specs for controllers go here */
 
-describe('Personal Website controllers', function() {
+describe('Ted\'s Website controllers', function() {
 	
     describe('InterestListCtrl', function() {
         var scope, ctrl;
 	
-        // Before each test we tell Angular to load the personalWebsite module.
-        beforeEach(module('personalWebsite'));
+        // Before each test we tell Angular to load the tedWebsite module.
+        beforeEach(module('tedWebsite'));
 	
 	beforeEach(inject(function($controller) {
             scope = {};
