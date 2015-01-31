@@ -1,10 +1,10 @@
 0 info it worked if it ends with ok
-1 verbose cli [ 'c:\\Program Files\\nodejs\\node.exe',
-1 verbose cli   'c:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli [ 'd:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'd:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
 1 verbose cli   'run',
 1 verbose cli   'protractor' ]
 2 info using npm@1.4.28
-3 info using node@v0.10.35
+3 info using node@v0.10.36
 4 verbose run-script [ 'preprotractor', 'protractor', 'postprotractor' ]
 5 info preprotractor angular-phonecat@0.0.0
 6 verbose unsafe-perm in lifecycle true
@@ -21,10 +21,10 @@
 11 error You can get their info via:
 11 error     npm owner ls angular-phonecat
 11 error There is likely additional logging output above.
-12 error System Windows_NT 6.1.7601
-13 error command "c:\\Program Files\\nodejs\\node.exe" "c:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "run" "protractor"
-14 error cwd c:\Users\212445239\dev\angular-website
-15 error node -v v0.10.35
+12 error System Windows_NT 6.2.9200
+13 error command "d:\\Program Files\\nodejs\\node.exe" "d:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "run" "protractor"
+14 error cwd d:\Users\Ted\dev\angular-website
+15 error node -v v0.10.36
 16 error npm -v 1.4.28
 17 error code ELIFECYCLE
 18 verbose exit [ 1, true ]

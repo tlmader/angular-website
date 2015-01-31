@@ -15,21 +15,26 @@
     <div class="row">
       <div class="col-md-2">
         <!--Sidebar content-->
-
-		<!--The data that a user types into the input box (named query) is immediately available as a filter input in the list repeater.-->
+        
+        <!--The data that a user types into the input box (named query) is immediately available as a filter input in the list repeater.-->
         Search: <input ng-model="query">
+        Sort by:
+        <select ng-model="orderProp">
+          <option value="name">Alphabetical</option>
+          <option value="favorite">Favorite</option>
+        </select>
 
       </div>
       <div class="col-md-10">
         <!--Body content-->
-	    <p>Hello, {{name}}!</p>
-	    <p>I have {{interests.length}} interests to share with you:</p>
+        <p>Hello, {{name}}!</p>
+        <p>I have {{interests.length}} interests to share with you:</p>
         <ul class="interests">
-		  <!--The filter lets a user enter search criteria and immediately see the effects of their search on the interest list.-->
-          <li ng-repeat="interest in interests | filter:query">
+          <!--The filter lets a user enter search criteria and immediately see the effects of their search on the interest list.-->
+          <li ng-repeat="interest in interests | filter:query | orderBy:orderProp">
             {{interest.name}}
-	        <p>{{interest.snippet}}</p>
-	        <p><a href={{interest.link}}>{{interest.linkText}}</a></p>
+	    <p>{{interest.snippet}}</p>
+	    <p><a href={{interest.link}}>{{interest.linkText}}</a></p>
           </li>
         </ul>
       </div>

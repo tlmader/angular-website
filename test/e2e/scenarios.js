@@ -21,7 +21,7 @@ describe('Personal Website', function() {
       expect(interestList.count()).toBe(1);
 
       query.clear();
-      query.sendKeys('game');
+      query.sendKeys('ing');
       expect(interestList.count()).toBe(2);
     });
 
@@ -29,8 +29,33 @@ describe('Personal Website', function() {
       query.clear();
       expect(browser.getTitle()).toMatch(/Ted Mader:\s*$/);
 
-      query.sendKeys('game');
-      expect(browser.getTitle()).toMatch(/Ted Mader: game$/);
+      query.sendKeys('Gaming');
+      expect(browser.getTitle()).toMatch(/Ted Mader: Gaming$/);
+    });
+	
+    it('should be possible to control interest order via the drop down select box', function() {
+
+      var interestNameColumn = element.all(by.repeater('interest in interests').column('interest.name'));
+
+      function getNames() {
+        return interestNameColumn.map(function(elm) {
+          return elm.getText();
+        });
+      }
+	
+      query.sendKeys('ing'); //let's narrow the dataset to make the test assertions shorter
+      
+      expect(getNames()).toEqual([
+        "Programming",
+        "Gaming"
+      ]);
+      
+      element(by.model('orderProp')).element(by.css('option[value="name"]')).click();
+      
+      expect(getNames()).toEqual([
+        "Gaming",
+        "Programming"
+      ]);
     });
   });
 });
