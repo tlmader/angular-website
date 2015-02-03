@@ -1,13 +1,13 @@
 [
     {
-        "release date": "September 21, 2010", 
+        "release": "2010/9/21", 
         "id": "civilization-v", 
         "imageUrl": "img/games/civilization-v.0.jpg", 
         "name": "Civilization V", 
         "snippet": "Become Ruler of the World by establishing and leading a civilization from the dawn of man into the space age: Wage war, conduct diplomacy, discover new technologies, go head-to-head with some of history’s greatest leaders and build the most powerful empire the world has ever known."
     }, 
     {
-        "release date": "May 16, 2011", 
+        "release": "2011/5/16", 
         "id": "terraria", 
         "imageUrl": "img/games/civilization-v.0.jpg", 
         "name": "Terraria", 
