@@ -2,59 +2,59 @@
 
 /* http://docs.angularjs.org/guide/dev_guide.e2e-testing */
 
-describe('Ted\'s Website', function() {
+describe('Gaming Hub', function() {
 
-    describe('Interest list view', function() {
+    describe('Game list view', function() {
 
         beforeEach(function() {
-            browser.get('app/index.html');
+            browser.get('app/gaming-hub.html');
         });
 
-        var interestList = element.all(by.repeater('interest in interests'));
+        var gameList = element.all(by.repeater('game in games'));
         var query = element(by.model('query'));
 
-        it('should filter the interest list as a user types into the search box', function() {
+        it('should filter the game list as a user types into the search box', function() {
 
-            expect(interestList.count()).toBe(3);
+            expect(gameList.count()).toBe(3);
 
-            query.sendKeys('programming');
-            expect(interestList.count()).toBe(1);
+            query.sendKeys('guild');
+            expect(gameList.count()).toBe(1);
 
             query.clear();
-            query.sendKeys('ing');
-            expect(interestList.count()).toBe(2);
+            query.sendKeys('er');
+            expect(gameList.count()).toBe(2);
         });
 
         it('should display the current filter value in the title bar', function() {
             query.clear();
-            expect(browser.getTitle()).toMatch(/Ted Mader:\s*$/);
+            expect(browser.getTitle()).toMatch(/Gaming Hub:\s*$/);
 
-            query.sendKeys('Gaming');
-            expect(browser.getTitle()).toMatch(/Ted Mader: Gaming$/);
+            query.sendKeys('guild');
+            expect(browser.getTitle()).toMatch(/Gaming Hub: guild$/);
         });
 
-        it('should be possible to control interest order via the drop down select box', function() {
+        it('should be possible to control game order via the drop down select box', function() {
 
-            var interestNameColumn = element.all(by.repeater('interest in interests').column('interest.name'));
+            var gameNameColumn = element.all(by.repeater('game in games').column('game.name'));
 
             function getNames() {
-                return interestNameColumn.map(function(elm) {
+                return gameNameColumn.map(function(elm) {
                     return elm.getText();
                 });
             }
 
-            query.sendKeys('ing'); //let's narrow the dataset to make the test assertions shorter
+            query.sendKeys('er'); //let's narrow the dataset to make the test assertions shorter
 
             expect(getNames()).toEqual([
-                "Programming",
-                "Gaming"
+                "Terraria",
+                "Sid Meier\'s Civilization V"
             ]);
 
             element(by.model('orderProp')).element(by.css('option[value="name"]')).click();
 
             expect(getNames()).toEqual([
-                "Gaming",
-                "Programming"
+                "Sid Meier\'s Civilization V",
+                "Terraria"
             ]);
         });
     });
