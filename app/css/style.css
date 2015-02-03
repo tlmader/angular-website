@@ -1,0 +1,67 @@
+.nav a {
+  color: #5a5a5a;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 14px 10px;
+  text-transform: uppercase;
+}
+
+.nav li {
+  display: inline;
+}
+
+.jumbotron {
+  background-image:url('https://d3b4yo2b5lbfy.cloudfront.net/wp-content/uploads/wallpapers/HumanBonusWP_DivReach-1920x1080.jpg');
+  height: 500px;
+}
+
+.jumbotron .container {
+  position: relative;
+  top:100px;
+}
+
+.jumbotron h1 {
+  color: #fff;
+  font-size: 56px;  
+  font-family: 'Calibri', sans-serif;
+  font-weight: bold;
+}
+
+.jumbotron p {
+  font-size: 20px;
+  color: #fff;
+}
+
+.pics {
+    background-color: #efefef;
+    border-bottom: 1px solid #dbdbdb;
+}
+
+.pics h2 {
+    color: #393c3d;
+    font-size: 24px;
+}
+
+.pics p {
+    font-size: 15px;
+    margin-bottom: 13px;
+}
+
+.section {
+  background-color: #f7f7f7;
+}
+
+.section h1 {
+  font-size: 48px;  
+  font-family: 'Calibri', sans-serif;
+}
+
+.section h3 {
+  font-family: 'Calibri', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.section a {
+  color: #00b0ff;
+}

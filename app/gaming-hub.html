@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en" ng-app="gamingHub" ng-controller="GameListCtrl">
+<head>
+    <meta charset="utf-8">
+    <title>Gaming Hub: {{query}}</title>
+    <link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!--
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="css/app.css">
+    -->
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="js/controllers.js"></script>
+</head>
+<!--The ngController directive references the name of our controller, GameListCtrl (located in the JavaScript file controllers.js).-->
+<body>
+    
+    <div class="nav">
+        <div class="container">
+            <ul class="nav nav-tabs pull-left">
+                <li><a href="index.html">Ted Mader</a></li>
+                <li><a href="#">Photos</a></li>
+                <li><a href="#">Music</a></li>
+                <li class="active"><a href="gaming-hub.html">Gaming Hub</a></li>
+            </ul>
+            <ul class="nav nav-pills pull-right">
+                <li><a href="https://github.com/Tlmader">GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/tlmader">LinkedIn</a></li>
+                <li><a href="https://www.facebook.com/tlmader">Facebook</a></li>
+                <li><a href="https://plus.google.com/u/0/107175590216007598732">Google+</a></li>
+                <li><a href="https://twitter.com/tlmader95">Twitter</a></li>
+                <li><a href="http://steamcommunity.com/id/tlmader/">Steam</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2">
+                <!--Sidebar content-->
+
+                <!--The data that a user types into the input box (named query) is immediately available as a filter input in the list repeater.-->
+                Search: <input ng-model="query">
+                Sort by:
+                <select ng-model="orderProp">
+                    <option value="name">Alphabetical</option>
+                    <option value="favorite">Favorite</option>
+               </select>
+
+            </div>
+            <div class="col-md-10">
+                <!--Body content-->
+                <p>Hello, {{name}}!</p>
+                <p>I have {{games.length}} games to share with you:</p>
+                <ul class="games">
+                    <!--The filter lets a user enter search criteria and immediately see the effects of their search on the game list.-->
+                    <li ng-repeat="game in games | filter:query | orderBy:orderProp">
+                        {{game.name}}
+                        <p>{{game.snippet}}</p>
+                        <p><a href={{game.link}}>{{game.linkText}}</a></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,95 @@
+{
+    "developers": "Firaxis Games", 
+    "publishers": [
+	"2K Games",
+	"Aspyr"
+    ],
+    "distributors": [
+        "Take-Two Interactive"
+    ], 
+    "directors": [
+	"Sid Meier"
+    ],
+    "producers": [
+        "Dennis Shirk",
+        "Lisa Miller"
+    ],
+    "designers": [
+        "Jon Shafer",
+        "Ed Beach",
+        "Scott Lewis"
+    ],
+    "programmers": [
+        "Brian Wade",
+        "Tim Kipp",
+        "Ed Beach"
+    ],
+    "artists": [
+        "Dorian Newcomb",
+        "Chris Hickman",
+        "Brian Busatti"
+    ],
+    "writers": [
+        "Michelle Menard",
+        "Paul Murphy"
+    ],
+    "series": "Civilization",
+    "platforms": [
+        "Microsoft Windows",
+        "OS X",
+        "Linux",
+        "OnLive"
+    ],
+    "release dates": {
+        "Microsoft Windows": {
+            "NA": "September 21, 2010",
+            "EU": "September 24, 2010"
+        },
+        "OS X": "November 23, 2010",
+        "Linux, SteamOS": "June 10, 2014"
+    },
+    "genres": [
+        "Turn-based strategy",
+        "4X"
+    ],
+    "modes": [
+        "Single-player",
+        "Multiplayer"
+    ],
+    "distribution": [
+        "DVD",
+        "Download"
+    ],
+    "description": "In Civilization V, the player leads a civilization from prehistoric times into the future on a procedurally generated map, achieving one of a number of different victory conditions through research, exploration, diplomacy, expansion, economic development, government and military conquest.",
+    "system requirements": {
+        "Minimum": {
+            "OS": "Windows XP SP3/ Windows Vista SP2/ Windows 7", 
+            "Processor": "Intel Core 2 Duo 1.8 GHz or AMD Athlon X2 64 2.0 GHz",
+            "Memory": "2GB RAM",
+            "Graphics": "256 MB ATI HD2600 XT or better, 256 MB nVidia 7900 GS or better, or Core i3 or better integrated graphics",
+            "DirectX": "DirectX version 9.0c",
+            "Hard Drive": "8 GB Free",
+            "Sound": "DirectX 9.0c-compatible sound card",
+            "Note": "Optimized for the touch-screen Ultrabook device"
+        },
+        "Recommended": {
+            "OS": "Windows XP SP3/ Windows Vista SP2/ Windows 7", 
+            "Processor": "Intel Core 2 Duo 1.8 GHz or AMD Athlon X2 64 2.0 GHz",
+            "Memory": "2GB RAM",
+            "Graphics": "256 MB ATI HD2600 XT or better, 256 MB nVidia 7900 GS or better, or Core i3 or better integrated graphics",
+            "DirectX": "DirectX version 9.0c",
+            "Hard Drive": "8 GB Free",
+            "Sound": "DirectX 9.0c-compatible sound card",
+            "Note": "Optimized for the touch-screen Ultrabook device"
+        }
+    },
+    "id": "civilization-v", 
+    "images": [
+        "img/games/civilization-v.0.jpg", 
+        "img/phones/civilization-v.1.jpg", 
+        "img/phones/civilization-v.2.jpg",
+        "img/phones/civilization-v.3.jpg", 
+        "img/phones/civilization-v.4.jpg"
+    ], 
+    "name": "Civilization V"
+}
