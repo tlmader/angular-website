@@ -2,26 +2,26 @@
 
 /* Controllers */
 
-var tedWebsite = angular.module('tedWebsite', []);
+var gamingHub = angular.module('gamingHub', []);
 
-// The InterestListCtrl controller attaches the interest data to the $scope that was injected into our controller function.
-tedWebsite.controller('InterestListCtrl', function ($scope) {
+// The GameListCtrl controller attaches the game data to the $scope that was injected into our controller function.
+gamingHub.controller('GameListCtrl', function ($scope) {
     $scope.name = 'World';
-    $scope.interests = [
-        {'name': 'Programming',
-//         'snippet': 'My college curriculum focuses on Java, and I work as a software engineer apprentice at the GE Capital Technology Center in New Orleans. Aside from Java, I have worked with C, C#, Python, HTML, CSS, JavaScript, and AngularJS.',
-//         'link': 'https://github.com/Tlmader',
-//         'linkText': 'Check out my GitHub profile.',
+    $scope.games = [
+        {'name': 'Guild Wars 2',
+         'snippet': 'This is my favorite MMORPG. It features action-packed combat, an emphasis on cooperative play, and it lacks a subscription fee. New content is released regularly, and an expansion is in the works. It will never hurt to try out this amazing game.',
+         'link': 'https://www.guildwars2.com/en/',
+         'linkText': 'Visit the Guild Wars 2 website.',
          'favorite': 1},
-        {'name': 'Gaming',
-//         'snippet': 'I enjoy role-playing, strategy, and sandbox games. My all-time favorite titles are Guild Wars 2, Civilization V, Minecraft, Terraria and SimCity 4. More recently, I have been playing ANNO 2070, Hearthstone. I\'m pretty hyped for the upcoming expansion for Guild Wars 2 called Heart of Thorns.',
-//         'link': 'http://steamcommunity.com/id/tlmader/',
-//         'linkText': 'Visit me on Steam.',
+        {'name': 'Terraria',
+         'snippet': 'The 2D world offers lots to be discovered to improve your character and to use in building creation. The combat, exploration, and creativity in Terraria tie-in seamlessly. No matter what type of gamer you are, you will find something enjoyable to do.',
+         'link': 'https://www.youtube.com/watch?v=E0scnF8pXfU',
+         'linkText': 'Watch this awesome trailer.',
          'favorite': 2},
-        {'name': 'Visual Art',
-//         'snippet': 'I enjoy drawing with pencil and playing with Photoshop. Most of my inspiration is drawn from video games.',
-//         'link': 'http://tlmader.deviantart.com/',
-//         'linkText': 'View my work on deviantART.',
+        {'name': 'Sid Meier\'s Civilization V',
+         'snippet': 'My favorite strategy game. The player manages an empire in a randomly-generated world.',
+         'link': 'http://www.civilization5.com/',
+         'linkText': 'Official Website',
          'favorite': 3}
     ];
   

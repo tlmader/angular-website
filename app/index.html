@@ -1,44 +1,91 @@
-<!doctype html>
-<html lang="en" ng-app="tedWebsite" ng-controller="InterestListCtrl">
-<head>
-    <meta charset="utf-8">
-    <title>Ted Mader: {{query}}</title>
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
-    <link rel="stylesheet" href="css/app.css">
-    <script src="bower_components/angular/angular.js"></script>
-    <script src="js/controllers.js"></script>
-</head>
-<!--The ngController directive references the name of our controller, InterestListCtrl (located in the JavaScript file controllers.js).-->
-<body>
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet">
+        <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
 
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-2">
-                <!--Sidebar content-->
-
-                <!--The data that a user types into the input box (named query) is immediately available as a filter input in the list repeater.-->
-                Search: <input ng-model="query">
-                Sort by:
-                <select ng-model="orderProp">
-                    <option value="name">Alphabetical</option>
-                    <option value="favorite">Favorite</option>
-               </select>
-
-            </div>
-            <div class="col-md-10">
-                <!--Body content-->
-                <p>Hello, {{name}}!</p>
-                <p>I have {{interests.length}} interests to share with you:</p>
-                <ul class="interests">
-                    <!--The filter lets a user enter search criteria and immediately see the effects of their search on the interest list.-->
-                    <li ng-repeat="interest in interests | filter:query | orderBy:orderProp">
-                        {{interest.name}}
-                        <p>{{interest.snippet}}</p>
-                        <p><a href={{interest.link}}>{{interest.linkText}}</a></p>
-                    </li>
+    <body>
+        
+        <div class="nav">
+            <div class="container">
+                <ul class="nav nav-tabs pull-left">
+                    <li class="active"><a href="index.html">Ted Mader</a></li>
+                    <li><a href="#">Photos</a></li>
+                    <li><a href="#">Music</a></li>
+                    <li><a href="gaming-hub.html">Gaming Hub</a></li>
+                 </ul>
+                <ul class="nav nav-pills pull-right">
+                    <li><a href="https://github.com/Tlmader">GitHub</a></li>
+                    <li><a href="https://www.linkedin.com/in/tlmader">LinkedIn</a></li>
+                    <li><a href="https://www.facebook.com/tlmader">Facebook</a></li>
+                    <li><a href="https://plus.google.com/u/0/107175590216007598732">Google+</a></li>
+                    <li><a href="https://twitter.com/tlmader95">Twitter</a></li>
+                    <li><a href="http://steamcommunity.com/id/tlmader/">Steam</a></li>
                 </ul>
             </div>
         </div>
-    </div>
-</body>
+
+        <div class="jumbotron">
+            <div class="container">
+                <h1>Hello</h1>
+                <br>
+                <p>My name is Ted. I currently study at the University of New Orleans as a Computer Science major. I am a second-semester freshman, and I expect to graduate in 2017. My goal is to acquire the skills necessary in designing practical and robust software. I aspire to work as a software engineer for technology companies such as Google and Microsoft or delving into game design. My favorite game development studios include ArenaNet and Valve.</p>
+            </div>
+        </div> 
+        
+        <div class="pics">
+            <div class="container">
+                <h2>This is me.</h2>
+                <p>(The guy, of course.)</p>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="thumbnail">
+                            <img src="http://i.imgur.com/J0ZsIcC.jpg">
+                        </div>
+                        <div class="thumbnail">
+                            <img src="http://i.imgur.com/FEzCUCo.jpg">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="thumbnail">
+                            <img src="http://i.imgur.com/ig7uf0R.jpg">
+                        </div>
+                        <div class="thumbnail">
+                            <img src="http://i.imgur.com/xmcaNu3.jpg">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="thumbnail">
+                            <img src="http://i.imgur.com/JzVm2YE.jpg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h3>Programming</h3>
+                        <p>My college curriculum focuses on Java, and I work as a software engineer apprentice at the GE Capital Technology Center in New Orleans. Aside from Java, I have worked with C, C#, Python, HTML, CSS, JavaScript, and AngularJS. </p>
+                        <p><a href="https://github.com/Tlmader">Check out my GitHub profile.</a></p>
+                    </div>
+                    <div class="col-md-4">
+                        <h3>Gaming</h3>
+                        <p>I enjoy role-playing, strategy, and sandbox games. My all-time favorite titles are Guild Wars 2, Civilization V, Minecraft, Terraria and SimCity 4. More recently, I have been playing ANNO 2070, Hearthstone. I'm pretty hyped for the upcoming expansion for Guild Wars 2 called Heart of Thorns.</p>
+                        <p><a href="http://steamcommunity.com/id/tlmader/">Visit me on Steam.</a></p>
+                    </div>
+                    <div class="col-md-4">
+                        <h3>Visual Art</h3>
+                        <p>I enjoy drawing with pencil and playing with Photoshop. Most of my inspiration is drawn from video games.</p>
+                        <p><a href="http://tlmader.deviantart.com/">View my work on deviantART.</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </body>
 </html>
